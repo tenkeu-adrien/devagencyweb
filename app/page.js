@@ -1,103 +1,109 @@
-import Image from "next/image";
+import BlogSection from "@/components/BlogSection";
+import ContactForm2 from "@/components/ContactForm2";
+import CustomSolution from "@/components/CustomSolution";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import Testimonials from "@/components/Testimonials";
+import WhyChooseUs from "@/components/WhoChoseUse";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+let title =" Nous créons  des Sites web modernes & applications performantes pour booster votre activité "
+let content ="Dev Agency conçoit des sites vitrines et des applications sur-mesure pour vous rendre visible, attirer plus de clients et valoriser votre image — sans prise de tête technique."
+let image ="/11.jpg"
+
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({ ...prev, [name]: value }));
+  // };
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   if (!recaptchaToken) {
+  //     alert('Veuillez compléter le reCAPTCHA');
+  //     return;
+  //   }
+
+  //   setIsSubmitting(true);
+  //   try {
+  //     const response = await fetch('/api/send-email', {
+  //       method: 'POST',
+  //       headers: { 'Content-Type': 'application/json' },
+  //       body: JSON.stringify({ ...formData, recaptchaToken })
+  //     });
+      
+  //     if (response.ok) {
+  //       alert('Message envoyé avec succès!');
+  //       setFormData({
+  //         fullName: '',
+  //         subject: '',
+  //         phone: '',
+  //         email: '',
+  //         service: '',
+  //         otherOption: '',
+  //         message: ''
+  //       });
+  //     } else {
+  //       throw new Error('Erreur lors de l\'envoi');
+  //     }
+  //   } catch (error) {
+  //     alert('Erreur: ' + error.message);
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
+  return (
+    <main>
+    <HeroSection  title={title} content={content} image={image} />
+    {/* Tu peux ajouter d'autres sections ici */}
+
+    <WhyChooseUs />
+
+
+<ServicesSection />
+<div className="relative z-10  mx-auto  py-20 px-6  text-white text-center mb-10 bg-gray-900">
+  <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-md ">
+    Dev Agency, votre partenaire digital de confiance
+  </h1>
+  <p className="text-lg md:text-xl mb-8 ">
+    Création de sites web, développement d’applications web et mobiles, optimisation SEO/SEM...
+    Boostez votre présence en ligne avec notre équipe d’experts.
+  </p>
+  <div className="flex flex-col sm:flex-row justify-center gap-4">
+  
+    <a 
+  href="/contact" 
+  className="bg-transparent border-2 border-gray-500 text-gray-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-all"
+>
+  Nous contacter
+</a>
+  </div>
+</div>
+
+<Testimonials />
+
+    <CustomSolution />
+
+
+
+   <ContactForm2 />
+<BlogSection />
+
+    <div className="bg-orange-500 py-16 text-center mt-8">
+  <h2 className="text-3xl font-bold mb-4">Vous avez un projet ?</h2>
+  <p className="text-lg mb-8">Chez <strong>Dev Agency</strong>, nous transformons vos idées en solutions digitales sur-mesure. Parlons-en dès maintenant !</p>
+  <div className="flex justify-center gap-4 flex-wrap">
+    <a href="/contact" className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">
+      Nous contacter
+    </a>
+    <a href="/contact" className="bg-orange-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-700">
+      Devis gratuit
+    </a>
+  </div>
+</div>
+
+    <Footer />
+  </main>
   );
 }

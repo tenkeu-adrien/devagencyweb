@@ -156,7 +156,7 @@ export default function ContactForm2() {
 
             <div className="my-4">
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                sitekey="6Lf8OTErAAAAAIcaZQw2niRXZBPo9V4N9wCEwJlA"
                 onChange={token => setRecaptchaToken(token)}
               />
             </div>
@@ -191,7 +191,7 @@ export default function ContactForm2() {
         <FaLinkedinIn size={18} />
       </a>
       <a 
-        href="https://instagram.com/devagencyweb" badges
+        href="https://instagram.com/devagencyweb" 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-2 rounded-full hover:opacity-90 transition-colors"

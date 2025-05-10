@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaLinkedinIn, FaInstagram, FaYoutube } from 'react-icons/fa';
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: '',
@@ -154,7 +154,7 @@ export default function ContactForm() {
 
             <div className="my-4">
               <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                sitekey={process.env.RECAPTCHA_SITE_KEY}
                 onChange={token => setRecaptchaToken(token)}
               />
             </div>

@@ -1,5 +1,5 @@
 module.exports = {
-    siteUrl: 'https://votresite.com',
+    siteUrl: 'https://devagencyweb.online',
     generateRobotsTxt: true, // Génère aussi robots.txt
     exclude: ['/admin/*', '/404'], // Pages à exclure
   };

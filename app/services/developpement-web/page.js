@@ -1,12 +1,5 @@
 import Footer from "@/components/Footer";
 import HeroWithNavbar from "@/components/HeroSection";
-import { Metadata } from "next";
-
-// export const metadata: Metadata = {
-//   title: "Développement Web | Dev Agency",
-//   description:
-//     "Création de sites web vitrines, e-commerce et plateformes personnalisées avec les technologies les plus modernes."
-// };
 
 export default function DeveloppementWebPage() {
   let title = " Développement d’applications web sur mesure"

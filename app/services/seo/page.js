@@ -1,18 +1,11 @@
 
 
-// export const metadata: Metadata = {
-//   title: "Développement Web | Dev Agency",
-//   description:
-//     "Création de sites web vitrines, e-commerce et plateformes personnalisées avec les technologies les plus modernes."
-// };
-
-import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 
-export default function DeveloppementWebPage() {
-  let text ='Améliorez votre visibilité sur Google grâce à notre stratégie SEO sur mesure.'
-  let title="Expert SEO – Référencement Google garanti"
-  let image= '/seo.jpg'
+export default function SEOPage() {
+  const text = "Améliorez votre visibilité sur Google grâce à notre stratégie SEO sur mesure.";
+  const title = "Expert SEO – Référencement Google garanti";
+  const image = "/seo.jpg";
     return (
       <>
       <HeroSection  content={text} image={image} title={title}/>
@@ -67,7 +60,6 @@ export default function DeveloppementWebPage() {
           </a>
         </div>
       </main>
-        <Footer />
       </>
     );
   }

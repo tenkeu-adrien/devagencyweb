@@ -1,10 +1,9 @@
-import Footer from "@/components/Footer";
 import HeroWithNavbar from "@/components/HeroSection";
 
 export default function DeveloppementWebPage() {
-  let title = " Développement d’applications web sur mesure"
-  let content= " Créez une application web performante, sécurisée et évolutive avec Dev Agency."
-  let  image ="/web.jpg"
+  const title = "Développement d&rsquo;applications web sur mesure";
+  const content = "Créez une application web performante, sécurisée et évolutive avec Dev Agency.";
+  const image = "/web.jpg";
   return (
     <>
     <HeroWithNavbar  title={title} content={content} image={image} />
@@ -59,7 +58,6 @@ export default function DeveloppementWebPage() {
         </a>
       </div>
     </main>
-<Footer />
     </>
   );
 }

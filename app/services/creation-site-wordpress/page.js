@@ -1,10 +1,9 @@
-import Footer from "@/components/Footer";
 import HeroWithNavbar from "@/components/HeroSection";
 
-export default function DeveloppementWebPage() {
-  let title = " Création de site web professionnel – Dev Agency"
-  let content= "Obtenez un site moderne, rapide et responsive pour booster votre présence en ligne."
-  let  image ="/site.jpg"
+export default function WordPressPage() {
+  const title = "Création de site web professionnel – Dev Agency";
+  const content = "Obtenez un site moderne, rapide et responsive pour booster votre présence en ligne.";
+  const image = "/site.jpg";
   return (
     <>
     <HeroWithNavbar   title={title} content={content} image={image} />
@@ -59,7 +58,6 @@ export default function DeveloppementWebPage() {
         </a>
       </div>
     </main>
-<Footer />
     </>
   );
 }

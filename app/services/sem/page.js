@@ -1,18 +1,11 @@
 
 
-// export const metadata: Metadata = {
-//   title: "Développement Web | Dev Agency",
-//   description:
-//     "Création de sites web vitrines, e-commerce et plateformes personnalisées avec les technologies les plus modernes."
-// };
-
-import Footer from "@/components/Footer";
 import HeroWithNavbar from "@/components/HeroSection";
 
-export default function DeveloppementWebPage() {
-  let title = " Agence SEM – Google Ads & Publicité en ligne"
-  let content= "Attirez des clients avec des campagnes Google Ads optimisées pour les conversions."
-  let  image ="/sem.jpg"
+export default function SEMPage() {
+  const title = "Agence SEM – Google Ads & Publicité en ligne";
+  const content = "Attirez des clients avec des campagnes Google Ads optimisées pour les conversions.";
+  const image = "/sem.jpg";
   return (
     <>
       <HeroWithNavbar content={content} image={image} title={title}/>
@@ -67,7 +60,6 @@ export default function DeveloppementWebPage() {
         </a>
       </div>
     </main>
-      <Footer />
     </>
   );
 }

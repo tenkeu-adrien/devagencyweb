@@ -1,13 +1,12 @@
-// components/Navbar.js
 "use client";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaRegPaperPlane } from "react-icons/fa"; // Icône pour le bouton
+import { FaRegPaperPlane } from "react-icons/fa";
 
 const navLinks = [
   { label: "Accueil", href: "/" },
-  { label: "Services", href: "/#services" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
   { label: "À propos", href: "/apropos" },
@@ -19,12 +18,10 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-gray-900 backdrop-blur py-4 px-6">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
         <a href="/" className="text-2xl font-bold text-orange-500">
           Dev Agency
         </a>
 
-        {/* Liens centrés */}
         <ul className="flex space-x-6 mx-auto">
           {navLinks.map((link) => (
             <motion.li
@@ -47,10 +44,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Bouton d'appel à l'actiohttps://www.facebook.com/devagencewebn */}
         <a
           href="/contact#devis"
-          className="flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors"
+          className="flex items-center gap-2 bg-orange-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-orange-700 transition-colors"
         >
           <FaRegPaperPlane className="text-lg" />
           Obtenir un devis
@@ -59,4 +55,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

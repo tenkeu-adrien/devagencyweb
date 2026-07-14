@@ -3,11 +3,19 @@ import { motion } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 
+const footerLinks = [
+  { label: "Accueil", href: "/" },
+  { label: "À propos", href: "/apropos" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/contact" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-        {/* Colonne 1 - Nom + description */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,11 +23,11 @@ export default function Footer() {
         >
           <h2 className="text-2xl font-bold text-orange-600">Dev Agency</h2>
           <p className="mt-4 text-white/80">
-            Nous créons des solutions digitales sur-mesure : sites web, applications mobiles, SEO et SEM. Votre réussite est notre priorité.
+            Nous créons des solutions digitales sur-mesure : sites web, applications
+            mobiles, SEO et SEM. Votre réussite est notre priorité.
           </p>
         </motion.div>
 
-        {/* Colonne 2 - Navigation */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,20 +35,16 @@ export default function Footer() {
         >
           <h3 className="text-xl font-semibold mb-4">Navigation</h3>
           <ul className="space-y-2">
-            {["Accueil", "À propos", "Services", "Blog", "Contact"].map((item, index) => (
-              <li key={index}>
-                <Link
-                  href={`/${item.toLowerCase().replace(/\s/g, "-")}`}
-                  className="hover:underline transition"
-                >
-                  {item}
+            {footerLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:underline transition">
+                  {link.label}
                 </Link>
               </li>
             ))}
           </ul>
         </motion.div>
 
-        {/* Colonne 3 - Réseaux sociaux + bouton */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,23 +52,18 @@ export default function Footer() {
         >
           <h3 className="text-xl font-semibold mb-4">Suivez-nous</h3>
           <div className="flex space-x-4 mb-6 text-orange-500 text-2xl">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://facebook.com/devagenceweb" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://instagram.com/devagencyweb" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/djeudje-tenkeu-adrien-kevin" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
-              <a 
-                    href="https://youtube.com/devagency" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  //  target="_blank" rel="noopener noreferrer"
-                  >
-                    <FaYoutube  />
-                  </a>
+            <a href="https://youtube.com/devagencyweb" target="_blank" rel="noopener noreferrer">
+              <FaYoutube />
+            </a>
           </div>
 
           <Link
